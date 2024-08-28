@@ -1,0 +1,41 @@
+.logo-mulheres-tech{
+    /* altura */
+    height: 30rem;
+    /* largura */
+    width: 30rem;
+    /* cor de fundo */
+    background-color:purple;
+    /* centralizar texto horizontalmente */
+    text-align:center;
+    /* centralizar texto verticalmente */
+    line-height: 30rem;
+    /* cor do texto */
+    color: yellow;
+    /* famlia da fonte */
+    font-family: Arial, Helvetica, sans-serif;
+    /* centralizar quadrado  na horizontal */
+    margin: auto;
+}
+
+h2{
+    color: black;
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    padding: 15px;
+}
+form{
+    /* cor de fundo */
+    background-color:white;
+    /* centralizar texto horizontalmente */
+    text-align:center;
+    /* centralizar texto verticalmente */
+    line-height: 2.0rem;
+    /* cor do texto */
+    color: purple;
+    /* famlia da fonte */
+    font-family: Arial, Helvetica, sans-serif;
+    /* centralizar quadrado  na horizontal */
+    margin: auto;
+
+}

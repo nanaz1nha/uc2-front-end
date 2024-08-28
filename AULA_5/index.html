@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 5</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="logo-mulheres-tech">
+      <h1>MULHERES TECH</h1>
+    </div>
+    
+    <h2>Cadastro Mulheres Tech</h2>
+<!-- A tag <form> em HTML é usada para criar um formulário onde os usuários podem inserir dados. -->
+    
+<!--  O atributo action especifica a URL para a qual os dados do formulário serão enviados quando o formulário for enviado -->
+
+<form action="/action_page.php">
+
+
+    <!-- Label significa etiqueta/legenda do campo. Define rótulos para tags input  -->
+    <!-- atributo FOR serve para conectar o label e o input -->
+    <!-- tag br: quebra de linha -->
+  <label for="fname">Primeiro Nome:</label><br>
+  
+  <!-- atributo type: Defime o tipo-->
+  <!-- atributo name: define o nome -->
+  <!-- atributo value: define o valor -->
+  <!-- atributo id: define o identificador, coisa unica, funcionar como a classe, porém a classe define uma categoria -->
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="lname">Último nome:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+  <input type="submit" value="Cadastrar">
+</form>
+  </body>
+</html>
