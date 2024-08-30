@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 6</title>
+  </head>
+  <body>
+    <h2>Cadastro de Produto</h2>
+
+    <form action="">
+      <label for="name">Nome</label><br />
+      <input type="text" id="name" name="name" value="" /><br />
+
+     <!-- ATIVIDADE: INSERIR UMA MÁSCARA DE MOEDA REAL NO INPUT DE -->
+
+      <label for="preco">Preço</label><br />
+      <input type="text" 
+      id="preco" 
+      name="preco" 
+      placeholder="R$00,00"
+      value="" /><br />
+
+       <label for="categoria">Categoria:</label>
+      <select name="categoria" id="categoria">
+        <option value="Feminino">Feminino</option>
+        <option value="Masculino">Masculino</option>
+        
+      </select>
+      <br /><br />
+
+      <label for="tamanho">Tamanho:</label>
+
+      <!-- select é a tag da caixa de seleção -->
+      <select name="cor" id="cor">
+        <!-- opções de valores da caixa de seleção -->
+        <option value="Preto">Preto</option>
+        <option value="Branco">Branco</option>
+        <option value="Bege">Bege</option>
+      </select>
+      <br /><br />
+
+      <!-- Atividade: Colocar comentários da linha 29 até a 37 explicando as tags -->
+
+      <!-- tag label é a legenda do select  -->
+      <!-- atributo for da tag label: Cria um link entre label e o input -->
+      <label for="tamanho">Tamanho:</label>
+
+      <!-- select é a tag da caixa de seleção -->
+      <select name="tamanho" id="tamanho">
+        <!-- opções de valores da caixa de seleção -->
+        <option value="PP">PP</option>
+        <option value="P">P</option>
+        <option value="M">M</option>
+        <option value="G">G</option>
+        <option value="GG">GG</option>
+        <option value="XG">XG</option>
+      </select>
+      <br /><br />
+      <input type="submit" value="Cadastrar" />
+    </form>
+    <script>
+      function formatarParaReal(value) {
+            // Remove qualquer caractere que não seja número
+            const number = value.replace(/\D/g, '');
+            // Converte para float e divide por 100
+            const floatValue = parseFloat(number) / 100;
+            // Formata como moeda brasileira
+            return floatValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+
+        document.getElementById('preco').addEventListener('input', function (event) {
+            const input = event.target;
+            const cursorPos = input.selectionStart; // Posição do cursor antes da alteração
+            const formattedValue = formatarParaReal(input.value);
+            
+            // Atualiza o valor do input com a formatação
+            input.value = formattedValue;
+        });
+    </script>
+  </body>
+</html>
